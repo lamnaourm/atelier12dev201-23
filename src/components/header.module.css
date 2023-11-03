@@ -1,0 +1,12 @@
+.header {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}

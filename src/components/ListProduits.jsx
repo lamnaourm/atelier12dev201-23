@@ -2,17 +2,24 @@ import axios from 'axios'
 import React, { Component } from 'react'
 import Produit from './Produit'
 import styles from './listproduit.module.css'
+import Header from './Header'
 
 export default class ListProduits extends Component {
 
     state = {
         categories: [],
         CatId: -1,
-        produits: []
+        produits: [],
+        panier:[]
+    }
+
+    addPanier = (produit) => {
+        this.setState({panier:[...this.state.panier, produit]})
     }
     render() {
         return (
             <div className={styles.list}>
+                <Header panier={this.state.panier}/>
                 <select value={this.state.CatId} onChange={(e) => this.setState({ CatId: e.target.value })}>
                     <option value="0">Tous les produits</option>
                     {
@@ -24,7 +31,7 @@ export default class ListProduits extends Component {
 
                 <div className={styles.products}>
                     {this.state.produits.map(p =>
-                        <Produit produit={p} />
+                        <Produit produit={p} handleClick={this.addPanier}/>
                     )}
                 </div>
             </div>

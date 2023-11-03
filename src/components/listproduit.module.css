@@ -3,3 +3,19 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
+
+
+.products {
+    margin: 2px 50px;
+}
+
+.list {
+    text-align: center;
+}
+
+.list select {
+    font-size: 20px;
+    width: 30%;
+    margin: 3px;
+    text-align: center;
+}
