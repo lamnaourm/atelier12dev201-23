@@ -1,0 +1,16 @@
+.produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.produit h4,.produit h5, .produit p{
+    margin: 0;
+    padding: 0;
+}
+
+.produit img {
+    width: 100%;
+}
